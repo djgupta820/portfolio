@@ -1,0 +1,107 @@
+:root{
+    --bg-color: #001427;
+    --bg-color-containers: #011a31;
+    --font-color: #0084ff;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    color: #fff;
+    background-color: var(--bg-color-containers);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em;
+    background-color: var(--bg-color);
+    position: fixed;
+    z-index: 100;
+}
+.logo{
+    font-size: 2em;
+    margin-left: 1.3em;
+}
+.openMenu, .closeMenu, .icons{
+    margin: 6px;
+    font-size: 2em;
+    display: none;
+}
+.mainMenu{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.mainMenu a{
+    font-size: 1.4em;
+}
+.mainMenu a:hover{
+    transition: 200ms;
+    color: var(--font-color);
+    border-bottom: 1px solid var(--font-color);
+    padding-bottom: 5px;
+}
+
+.icons img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.icons img:hover{
+    transition: 200ms;
+    background-color: var(--font-color);
+}
+
+@media all and (width <= 800px){
+    .mainMenu{
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-color);
+        color: #fff;
+        transition: top 1s ease;
+        display: none;
+    }
+    .openMenu{
+        display: block;
+        margin-right: 1.2em;
+    }
+    .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .mainMenu a{
+        margin-top: 1.1em;
+    }
+    .mainMenu .openMenu{
+        display: block;
+    }
+    .icons{
+        display: inline-block;
+        padding: 12px;
+        margin-top: 1.1em;
+    }
+    
+}
