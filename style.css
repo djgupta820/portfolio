@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 :root{
-    --bg-color: #011629;
-    --bg-color-containers: #011a31;
+    --nav-color: #011629;
+    --bg-color: #041b30;
+    --bg-color-containers: #032544;
     --font-color: #0084ff;
 }
 *{
@@ -10,6 +12,7 @@
 body{
     box-sizing: border-box;
     color: #fff;
+    font-family: 'Roboto Slab', serif;
     background-color: var(--bg-color);
 }
 body::-webkit-scrollbar{
@@ -26,13 +29,17 @@ a{
     align-items: center;
     justify-content: space-between;
     padding: .5em;
-    background-color: var(--bg-color);
+    background-color: var(--nav-color);
     position: fixed;
     z-index: 100;
 }
 .logo{
     font-size: 2em;
     margin-left: 1.3em;
+    font-weight: bolder;
+}
+.logo a{
+    color: var(--font-color);
 }
 .openMenu, .closeMenu, .icons{
     margin: 6px;
@@ -54,7 +61,9 @@ a{
     border-bottom: 1px solid var(--font-color);
     padding-bottom: 5px;
 }
-
+.mainMenu i{
+    display: none;
+}
 .icons img{
     width: 50px;
     height: 50px;
@@ -72,7 +81,6 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid gray; */
 }
 .hero h1,h2{
     color: var(--font-color);
@@ -98,6 +106,7 @@ a{
     gap: 2em;
     color: var(--font-color);
 }
+
 .links{
     width: 100%;
     display: flex;
@@ -128,7 +137,7 @@ a{
 .btns:hover{
     transition: 1s;
     letter-spacing: 2px;
-    transform: scale(1.5, 1.2);
+    transform: scale(1.1, .8);
     box-shadow: none;
 }
 .image{
@@ -138,8 +147,8 @@ a{
     align-items: center;
 }
 .image img{
-    width: 15em;
-    height: 15em;
+    width: 17em;
+    height: 18em;
     border-radius: 50%;
     background-color: wheat;
     animation: bounce;
@@ -150,7 +159,7 @@ a{
 }
 @keyframes bounce{
     100%{
-        translate: 0 80px;
+        translate: 0 40px;
     }
 }
 .about{
@@ -160,14 +169,20 @@ a{
 .abt-image{
     width: 40%;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .abt-image img{
-    width: 100%;
-    height: 80%;
+    width: 70%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: #0084ff;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 54px 55px, rgba(0, 0, 0, 0.2) 0px -12px 30px, rgba(0, 0, 0, 0.2) 0px 4px 6px, rgba(0, 0, 0, 0.07) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .abt-image img:hover{
     transition: 1s;
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
 }
 .content{
     width: 60%;
@@ -180,6 +195,11 @@ a{
 .skills{
     display: flex;
     padding: 1.2em;
+    margin-bottom: 1.5em;
+}
+.skills i{
+    margin-right: 1.1em;
+    font-size: 1.2em;
 }
 .skill-sec1{
     width: 50%;
@@ -206,7 +226,7 @@ a{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-bottom: 40px;
 }
 .project{
     width: 30%;
@@ -223,6 +243,10 @@ a{
     transition: 1s;
     background-color: #57a7f1;
     color: var(--bg-color);
+    background-image: url("images/project-background-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .project h4{
     color:var(--font-color)
@@ -242,40 +266,49 @@ a{
     background-color: #0084ff;
     margin: 5px;
 }
+.contact{
+    padding-bottom: 1.5em;
+}
 .form{
-    padding: 2em;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items:flex-start;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1.5em;
 }
-.form label{
+form{
+    width: 80%;
     display: flex;
     flex-direction: column;
-    margin-top: 2em;
-    margin-bottom: 1.1em;
-}
-.form input, textarea{
-    width: 90%;
-    padding: 5px;
-    border-radius: 8px;
-}
-.form input, textarea:focus{
+    align-items: center;
+    gap: 15px;
     border: 1px solid var(--font-color);
+    border-radius: 10px;
+    padding: 1.2em;
 }
-.form input[type="submit"]{
-    width: 10em;
-    margin-top: 2em;
-    align-self: center;
-    background-color: var(--bg-color);
-    color: var(--font-color);
-    box-shadow: var(--font-color) 0px 50px 100px -20px, var(--font-color) 0px 30px 60px -30px, var(--font-color) 0px -2px 6px 0px inset;
+.form input, label, textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
 }
-.form input[type="submit"]:hover{
-    transition: 1s;
-    box-shadow: none;
+form input:focus{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-
+.form button{
+    width: 40%;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    margin-top: 1.3em;
+    display: flex;
+    background-color: var(--nav-color);
+    align-items: center;
+    padding-top: 1.1em;
+    justify-content: center;
+    font-size: large;
+}
 /* 
 Media Query
 -------------------------------------------------------------------------------------
@@ -298,6 +331,9 @@ Media Query
         transition: top 1s ease;
         display: none;
     }
+    .mainMenu i{
+        display: inline;
+    }
     .openMenu{
         display: block;
         margin-right: 1.2em;
@@ -310,6 +346,9 @@ Media Query
     }
     .mainMenu a{
         margin-top: 1.1em;
+    }
+    .mainMenu .icons a:hover{
+        border: none;
     }
     .mainMenu .openMenu{
         display: block;
@@ -324,7 +363,7 @@ Media Query
     }
     .head-sec{
         flex-direction: column;
-        height: 100vh;
+        height: 110vh;
     }
     .data{
         margin-top: 1.5em;
@@ -337,12 +376,17 @@ Media Query
     .about{
         flex-direction: column;
     }
+    .about h1{
+        width: 100%;
+        border-bottom: 1px solid var(--font-color);
+    }
     .abt-image{
         width: 100%;
     }
     .content{
         width: 100%;
-        padding: 0 1.1em;
+        padding: .9em .9em;
+        margin-top: 1.1em;
     }
     .skills{
         flex-direction: column;
@@ -352,6 +396,7 @@ Media Query
     }
     .projects{
         flex-direction: column;
+        margin-bottom: 0;
     }
     .project{
         width: 90%;
