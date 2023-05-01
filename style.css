@@ -75,7 +75,7 @@ a{
     /* border: 1px solid gray; */
 }
 .hero h1,h2{
-    color: var(--hover-color);
+    color: var(--font-color);
 }
 .all-sec{
     width: 90%;
@@ -133,7 +133,6 @@ a{
 }
 .image{
     width: 50%;
-    /* height: 10%; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -151,7 +150,7 @@ a{
 }
 @keyframes bounce{
     100%{
-        translate: 0 20px;
+        translate: 0 80px;
     }
 }
 .about{
@@ -177,6 +176,104 @@ a{
     align-items:flex-start;
     padding: 1.1em 1.5em;
     margin: 0 1.2em;
+}
+.skills{
+    display: flex;
+    padding: 1.2em;
+}
+.skill-sec1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.skill-sec1 input[type="range"]{
+    width: 80%;
+}
+.skill-sec2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.skill-sec2 input[type="range"]{
+    width: 80%;
+}
+.projects{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.project{
+    width: 30%;
+    margin: auto;
+    padding: 1.2em;
+    border: 1px solid var(--font-color);
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.project:hover{
+    transition: 1s;
+    background-color: #57a7f1;
+    color: var(--bg-color);
+}
+.project h4{
+    color:var(--font-color)
+}
+.project p{
+    margin-top: 1.1em;
+    align-content: center;
+}
+.pro-head{
+    justify-items: center;
+    align-self: center;
+}
+.pro-links a{
+    border: 1px solid #0084ff;
+    padding: 2px 1.1em;
+    color: white;
+    background-color: #0084ff;
+    margin: 5px;
+}
+.form{
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.form label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 1.1em;
+}
+.form input, textarea{
+    width: 90%;
+    padding: 5px;
+    border-radius: 8px;
+}
+.form input, textarea:focus{
+    border: 1px solid var(--font-color);
+}
+.form input[type="submit"]{
+    width: 10em;
+    margin-top: 2em;
+    align-self: center;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    box-shadow: var(--font-color) 0px 50px 100px -20px, var(--font-color) 0px 30px 60px -30px, var(--font-color) 0px -2px 6px 0px inset;
+}
+.form input[type="submit"]:hover{
+    transition: 1s;
+    box-shadow: none;
 }
 
 /* 
@@ -246,5 +343,18 @@ Media Query
     .content{
         width: 100%;
         padding: 0 1.1em;
+    }
+    .skills{
+        flex-direction: column;
+    }
+    .skill-sec1, .skill-sec2{
+        width: 100%;
+    }
+    .projects{
+        flex-direction: column;
+    }
+    .project{
+        width: 90%;
+        margin: 1.2em;
     }
 }
