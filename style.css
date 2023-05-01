@@ -402,4 +402,7 @@ Media Query
         width: 90%;
         margin: 1.2em;
     }
+    .form button{
+        width: 90%;
+    }
 }
