@@ -363,7 +363,7 @@ Media Query
     }
     .head-sec{
         flex-direction: column;
-        height: 110vh;
+        height: 100vh;
     }
     .data{
         margin-top: 1.5em;
