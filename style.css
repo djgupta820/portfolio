@@ -106,7 +106,14 @@ a{
     gap: 2em;
     color: var(--font-color);
 }
-
+.anime{
+    animation: spread-text 5s linear infinite;
+}
+@keyframes spread-text{
+    0%{
+        transform: rotate(1, 2, 3);  
+    }
+}
 .links{
     width: 100%;
     display: flex;
@@ -147,8 +154,8 @@ a{
     align-items: center;
 }
 .image img{
-    width: 17em;
-    height: 18em;
+    width: 20em;
+    height: 20em;
     border-radius: 50%;
     background-color: wheat;
     animation: bounce;
@@ -291,6 +298,11 @@ form{
     padding: 5px;
     border-radius: 10px;
     border: none;
+    resize: none;
+}
+.form input, textarea{
+    background-color:#afd0f0;
+    color: var(--bg-color-containers);
 }
 form input:focus{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -363,7 +375,7 @@ Media Query
     }
     .head-sec{
         flex-direction: column;
-        height: 100vh;
+        height: 110vh;
     }
     .data{
         margin-top: 1.5em;
@@ -403,6 +415,6 @@ Media Query
         margin: 1.2em;
     }
     .form button{
-        width: 90%;
+        width: 80%;
     }
 }
