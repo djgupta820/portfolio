@@ -129,15 +129,14 @@ a{
     color: var(--font-color);
     background-color: var(--bg-color);
     font-size: 20px;
-    border: 1px solid gray;
+    border: 2px solid gray;
     border-radius: 8px;
-    box-shadow: var(--font-color) 0px 50px 100px -20px, var(--font-color) 0px 30px 60px -30px, var(--font-color) 0px -2px 6px 0px inset;
+    /* box-shadow: var(--font-color) 0px 50px 100px -20px, var(--font-color) 0px 30px 60px -30px, var(--font-color) 0px -2px 6px 0px inset; */
 }
 .btns:hover{
     transition: 1s;
-    letter-spacing: 2px;
-    transform: scale(1.1, .8);
-    box-shadow: none;
+    letter-spacing: 1.5px;
+    box-shadow: var(--font-color) 0px 50px 100px -20px, var(--font-color) 0px 30px 60px -30px, var(--font-color) 0px -2px 6px 0px inset;
 }
 .image{
     width: 50%;

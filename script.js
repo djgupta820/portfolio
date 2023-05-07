@@ -2,6 +2,7 @@ let openMenu = document.getElementById('openMenu')
 let closeMenu = document.getElementById('closeMenu')
 let mainMenu = document.getElementById('mainMenu')
 let form = document.getElementById('form')
+let btns = document.querySelectorAll('.btns')
 
 let home = document.querySelector('.fa-house').parentElement
 let about = document.querySelector('.fa-user').parentElement
